@@ -13,7 +13,7 @@ function ChatForm() {
     e.preventDefault();
     console.log(message);
 
-    setMessages((prevMessages) => [...prevMessages, { message }]);
+    setMessages((prevState) => [...prevState, { message, fromMe: true }]);
     sendMessage(message);
     setMessage("");
   };
